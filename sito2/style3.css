@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+html, body {
+   margin: 0%;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('468005550_18106820758448101_5416812452094447362_n.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(77, 77, 77, 0.452);
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.content h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 8px 4px 9px rgba(0, 0, 0, 0.2);
+}
+
+.link:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    font-weight: bold;
+    transition: 1s;
+    
+    
+    
+}
+
+
+
+
+
+
+
+.welcome img{
+    position:relative ;
+    width: 100%;
+    height: 50%;
+    opacity: 0.7; 
+}
+
+.titolo {
+    /* With Bootstrap, you can also add 'text-center text-white' classes in your HTML */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.row{
+   position: absolute;
+   top: 55%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+
+/*carosello*/
+.nav-btn{
+    border-radius: 20px;
+  }
+  .c-item {
+    height: 480px;
+  }
+  .c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
