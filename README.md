@@ -11,6 +11,6 @@ src:
     imgs:
     - tutte le immagini
   .htaccess (rewrite engine)
-  robot.txt
+ - robot.txt
 
 STATUS: NON IMPLEMENTATO
