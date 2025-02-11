@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram Slider Mobile-Friendly</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  
+  <style>
+    .instagram-container { position: relative; width: 100%; padding-bottom: 10%; overflow: hidden; }
+    .instagram-container blockquote { position: absolute; width: 100%; height: 100%; left: 0; top: 0; pointer-events: none; }
+    .slider-item { padding: 10px; }
+    .slick-prev, .slick-next {
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      z-index: 1000;
+    }
+    .slick-prev { left: -40px; }
+    .slick-next { right: -40px; }
+    .slick-prev:before, .slick-next:before { color: #000; font-size: 30px; }
+    @media (max-width: 576px) {
+      .slider-item { padding: 5px; }
+      .instagram-container { padding-bottom: 5%;}
+      .slick-prev, .slick-next { display: none !important; }
+    }
+    @media (max-width: 992px) {
+      .slider-item { padding: 5px; }
+      .instagram-container { padding-bottom: 5%; }
+      .slick-prev, .slick-next { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+    <div>
+        <div class="container mt-4">
+            <div class="instagram-slider"></div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script async src="//www.instagram.com/embed.js" onload="initializeInstagramSlider()"></script>
+    </div>
+  <script>
+    function initializeInstagramSlider() {
+      let instagramPosts = [
+        "https://www.instagram.com/p/C9XEQLftTt/",
+        "https://www.instagram.com/p/DF3E3tMtRGk/",
+        "https://www.instagram.com/p/DFaGrYxCjsh/",
+        "https://www.instagram.com/p/DD7Xkqwt3DW/",
+        "https://www.instagram.com/p/DDzq6gbtqBR/",
+        "https://www.instagram.com/p/DFzbJR7C2Kq/"
+      ];
+      
+      let sliderContainer = $('.instagram-slider');
+      instagramPosts.forEach(post => {
+        sliderContainer.append(`
+          <div class="slider-item">
+            <div class="instagram-container">
+              <blockquote class="instagram-media" data-instgrm-permalink="${post}" data-instgrm-version="14"></blockquote>
+            </div>
+          </div>
+        `);
+      });
+      
+      setTimeout(() => {
+        if (window.instgrm && window.instgrm.Embeds) {
+          window.instgrm.Embeds.process();
+        }
+      }, 1000);
+      
+      sliderContainer.slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        dots: true,
+        swipe: true,
+        touchMove: true,
+        responsive: [
+          { breakpoint: 992, settings: { slidesToShow: 2, swipe: true, touchMove: true } },
+          { breakpoint: 576, settings: { slidesToShow: 1, arrows: false, swipe: true, touchMove: true } }
+        ]
+      });
+    }
+  </script>
+  
+</body>
+</html>
