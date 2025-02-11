@@ -33,6 +33,8 @@ function initializeInstagramSlider() {
       dots: true,
       swipe: true,
       touchMove: true,
+      autoplay: true,         // Avvio automatico
+      autoplaySpeed: 3000,    // Velocità in ms (2 secondi)
       responsive: [
         { breakpoint: 992, settings: { slidesToShow: 2, swipe: true, touchMove: true } },
         { breakpoint: 576, settings: { slidesToShow: 1, arrows: true, swipe: true, touchMove: true } }
