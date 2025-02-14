@@ -29,7 +29,7 @@ function initializeInstagramSlider() {
       slidesToShow: 3,
       slidesToScroll: 1,
       infinite: true,
-      arrows: true,
+      arrows: false,
       dots: true,
       swipe: true,
       touchMove: true,
