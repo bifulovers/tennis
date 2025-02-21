@@ -14,7 +14,7 @@ html, body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('468005550_18106820758448101_5416812452094447362_n.jpg') center/cover no-repeat;
+    background: url("img/sfondo-hero.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
