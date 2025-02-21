@@ -13,6 +13,6 @@ src:
   .htaccess (rewrite engine)
  - robot.txt
 
-STATUS: NON IMPLEMENTATO
+STATUS:  IMPLEMENTATO
 
 modificato

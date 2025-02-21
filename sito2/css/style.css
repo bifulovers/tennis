@@ -114,9 +114,7 @@ html, body {
 
 /*carosello*/
 .nav-btn{
-
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -126,12 +124,14 @@ html, body {
     box-shadow: 8px 4px 9px rgba(0, 0, 0, 0.2);  }
   .c-item {
     height: 500px;
+    height: 100vh;
   }
   .c-img {
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     filter: brightness(0.6);
   }
+
 
   /*news*/
   .instagram-container { position: relative; width: 100%; padding-bottom: 1%; overflow: hidden; }
@@ -156,3 +156,23 @@ html, body {
         .instagram-container { padding-bottom: 2%; }
         .slick-prev, .slick-next { display: none !important; }
       }
+  /*mappa*/
+  .posizione {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+  }
+  .descrizione, .mappa {
+    flex: 1;
+    margin: 0 12px;
+  }
+  .descrizione{
+
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.8;
+      text-align: justify;
+  }
